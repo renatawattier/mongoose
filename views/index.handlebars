@@ -1,1 +1,27 @@
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <h1>Homework Mongo</h1>
+<button id="scrape">Scrape</button>
+<button id="clear">Delete Articles</button>
+{{#items}}
+    <p>{{title}}</p>
+    <p>{{link}}</p>
+{{/items}}
+
+<script>
+    $("#scrape").on("click", function(){
+        $.get("/scrape", function(response){
+            location.reload()
+
+        })
+    })
+
+       $("#clear").on("click", function(){
+        $.get("/clear", function(response){
+            location.reload()
+
+        })
+    })
+</script>
