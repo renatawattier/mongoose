@@ -12,7 +12,7 @@ var PORT = process.env.PORT || 3000
 
 app.use(bodyParser.json())
 
- mongoose.connect(CONNECTION_URI, 'mongodb://newuser:123456A@ds239692.mlab.com:39692/mongo-mongoose')
+ mongoose.connect('mongodb://newuser:123456A@ds239692.mlab.com:39692/mongo-mongoose')
 
 
 app.engine('handlebars', expressHandlebars({ defualtLayout: "main"}))
