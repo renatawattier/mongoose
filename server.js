@@ -8,7 +8,7 @@ var bodyParser = require('body-parser')
 var request = require('request')
 var Article = require('./articleModel')
 
-var PORT = 3000 || process.env.PORT
+var PORT = process.env.PORT || 3000
 
 app.use(bodyParser.json())
 
